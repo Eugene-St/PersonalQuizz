@@ -9,12 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
+  @IBOutlet var startQuizzButton: UIButton!
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    
+    view.setGradientBackColor(colorone: .white, colorTwo: .systemTeal, colorThree: .white)
+        
+    startQuizzButton.layer.cornerRadius = 20
   }
-
-
 }
 

@@ -13,6 +13,7 @@
 		58F679D6241021DC008CE072 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58F679D4241021DC008CE072 /* Main.storyboard */; };
 		58F679D8241021DF008CE072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F679D7241021DF008CE072 /* Assets.xcassets */; };
 		58F679DB241021DF008CE072 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58F679D9241021DF008CE072 /* LaunchScreen.storyboard */; };
+		58F679E92410B6B4008CE072 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F679E82410B6B4008CE072 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		58F679D7241021DF008CE072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58F679DA241021DF008CE072 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58F679DC241021DF008CE072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58F679E82410B6B4008CE072 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,64 @@
 		58F679CD241021DC008CE072 /* PersonalQuizz */ = {
 			isa = PBXGroup;
 			children = (
-				58F679CE241021DC008CE072 /* AppDelegate.swift */,
-				58F679D0241021DC008CE072 /* SceneDelegate.swift */,
-				58F679D2241021DC008CE072 /* ViewController.swift */,
-				58F679D4241021DC008CE072 /* Main.storyboard */,
-				58F679D7241021DF008CE072 /* Assets.xcassets */,
-				58F679D9241021DF008CE072 /* LaunchScreen.storyboard */,
-				58F679DC241021DF008CE072 /* Info.plist */,
+				58F679E624102292008CE072 /* Models */,
+				58F679E324102258008CE072 /* View Controllers */,
+				58F679E22410223D008CE072 /* Supporting Files */,
+				58F679E42410226C008CE072 /* Storyboards */,
+				58F679E52410227F008CE072 /* Source */,
+				58F679E72410B66A008CE072 /* UIView+Extensions */,
 			);
 			path = PersonalQuizz;
+			sourceTree = "<group>";
+		};
+		58F679E22410223D008CE072 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				58F679CE241021DC008CE072 /* AppDelegate.swift */,
+				58F679D0241021DC008CE072 /* SceneDelegate.swift */,
+				58F679DC241021DF008CE072 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58F679E324102258008CE072 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				58F679D2241021DC008CE072 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		58F679E42410226C008CE072 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				58F679D4241021DC008CE072 /* Main.storyboard */,
+				58F679D9241021DF008CE072 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		58F679E52410227F008CE072 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				58F679D7241021DF008CE072 /* Assets.xcassets */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		58F679E624102292008CE072 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		58F679E72410B66A008CE072 /* UIView+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				58F679E82410B6B4008CE072 /* UIView+Extension.swift */,
+			);
+			path = "UIView+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +191,7 @@
 			files = (
 				58F679D3241021DC008CE072 /* ViewController.swift in Sources */,
 				58F679CF241021DC008CE072 /* AppDelegate.swift in Sources */,
+				58F679E92410B6B4008CE072 /* UIView+Extension.swift in Sources */,
 				58F679D1241021DC008CE072 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +338,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7NCZ24UXD;
-				INFOPLIST_FILE = PersonalQuizz/Info.plist;
+				INFOPLIST_FILE = "PersonalQuizz/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = st.eugene.PersonalQuizz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,7 +357,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7NCZ24UXD;
-				INFOPLIST_FILE = PersonalQuizz/Info.plist;
+				INFOPLIST_FILE = "PersonalQuizz/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = st.eugene.PersonalQuizz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
